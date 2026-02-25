@@ -1,0 +1,367 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #1a1a1a;
+  background: #f5f5f5;
+  line-height: 1.5;
+}
+
+/* --- Nav --- */
+
+.nav {
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+}
+
+.nav-brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #111;
+  letter-spacing: -0.01em;
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.nav-user-name { font-weight: 600; color: #222; }
+
+.nav-switch {
+  color: #2563eb;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.nav-switch:hover { text-decoration: underline; }
+
+.nav-admin {
+  font-size: 0.8rem;
+  color: #888;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-admin:hover { color: #555; text-decoration: underline; }
+
+/* --- Layout --- */
+
+.page { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+/* --- Account Picker --- */
+
+.picker-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.picker-header h1 {
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.picker-header p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.picker-section-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #888;
+  margin-bottom: 0.6rem;
+}
+
+.picker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.picker-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.picker-card:hover {
+  border-color: #999;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.picker-card-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.15rem;
+}
+
+.picker-card-detail {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* --- Buyer Dashboard --- */
+
+.dashboard-header {
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-header h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.15rem;
+}
+
+.dashboard-header p {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.profile-bar {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  color: #555;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.profile-bar .label {
+  font-weight: 600;
+  color: #333;
+}
+
+.tag {
+  display: inline-block;
+  background: #f0f0f0;
+  padding: 0.12rem 0.45rem;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  margin-right: 0.25rem;
+}
+
+.results-count {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 0.75rem;
+}
+
+.match-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: border-color 0.15s;
+}
+
+.match-card:hover { border-color: #999; }
+.match-info { flex: 1; }
+
+.match-name {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.15rem;
+}
+
+.match-description {
+  font-size: 0.82rem;
+  color: #555;
+  margin-bottom: 0.4rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.match-meta {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 0.4rem;
+}
+
+.match-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+/* --- Seller Dashboard --- */
+
+.listing-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.listing-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.listing-card .listing-meta {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.listing-card .listing-description {
+  font-size: 0.88rem;
+  color: #444;
+  margin-bottom: 0.6rem;
+}
+
+.listing-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.section-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #888;
+  margin-bottom: 0.6rem;
+}
+
+.buyer-row {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 0.85rem 1.1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buyer-row:hover { border-color: #999; }
+
+.buyer-row-name {
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.buyer-row-detail {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+/* --- Search View --- */
+
+.search-header {
+  margin-bottom: 1.5rem;
+}
+
+.search-header h1 {
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.search-header p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.search-section {
+  margin-bottom: 1.25rem;
+}
+
+.search-section label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.tag-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.tag-toggle {
+  padding: 0.3rem 0.65rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 0.8rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.tag-toggle.selected {
+  background: #222;
+  color: #fff;
+  border-color: #222;
+}
+
+.revenue-inputs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.revenue-inputs input {
+  width: 140px;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.search-btn {
+  padding: 0.5rem 1.5rem;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.search-btn:hover { background: #444; }
+
+.search-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}

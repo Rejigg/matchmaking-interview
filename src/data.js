@@ -1,0 +1,527 @@
+export const businesses = [
+  {
+    id: "biz-1",
+    name: "Sunny Side Plumbing",
+    description: "Residential plumbing company serving the greater Austin area for 15 years. Strong repeat customer base, 3 full-time employees, 2 part-time. Owner looking to retire.",
+    asking_price: 450000,
+    annual_revenue: 620000,
+    annual_profit: 155000,
+    industry_tags: ["plumbing", "home-services", "residential"],
+    state: "TX",
+    date_listed: "2026-01-15",
+    owner_name: "Mike R."
+  },
+  {
+    id: "biz-2",
+    name: "GreenScape Landscaping",
+    description: "Commercial and residential landscaping with 40+ recurring contracts. Fully equipped fleet. 8 employees. Consistent 20% YoY growth.",
+    asking_price: 800000,
+    annual_revenue: 1100000,
+    annual_profit: 275000,
+    industry_tags: ["landscaping", "home-services", "commercial"],
+    state: "TX",
+    date_listed: "2026-02-01",
+    owner_name: "Diana L."
+  },
+  {
+    id: "biz-3",
+    name: "Coastal Seafood Grill",
+    description: "Popular waterfront restaurant, 120 seats. Known for fresh seafood. 10-year lease in prime location. Fully staffed, manager-operated.",
+    asking_price: 650000,
+    annual_revenue: 1800000,
+    annual_profit: 180000,
+    industry_tags: ["restaurant", "food-service", "hospitality"],
+    state: "FL",
+    date_listed: "2025-12-10",
+    owner_name: "James T."
+  },
+  {
+    id: "biz-4",
+    name: "PrecisionCNC Manufacturing",
+    description: "Custom CNC machining shop. Defense and aerospace clients. ISO 9001 certified. $2M in equipment. 12 skilled machinists. Long-term government contracts.",
+    asking_price: 3200000,
+    annual_revenue: 4800000,
+    annual_profit: 960000,
+    industry_tags: ["manufacturing", "cnc-machining", "aerospace", "defense"],
+    state: "OH",
+    date_listed: "2026-01-20",
+    owner_name: "Robert K."
+  },
+  {
+    id: "biz-5",
+    name: "BrightSmile Dental Practice",
+    description: "General dentistry practice, 2 operatories, 1 hygienist. 1,200 active patients. Located in growing suburban area. Owner relocating.",
+    asking_price: 520000,
+    annual_revenue: 780000,
+    annual_profit: 260000,
+    industry_tags: ["dental", "healthcare", "medical-practice"],
+    state: "NC",
+    date_listed: "2026-02-10",
+    owner_name: "Dr. Amy W."
+  },
+  {
+    id: "biz-6",
+    name: "QuickShip E-Commerce",
+    description: "DTC e-commerce brand selling outdoor gear. 80% of sales via Shopify. Strong social media presence. 4 employees, mostly remote. Warehouse lease through 2028.",
+    asking_price: 1200000,
+    annual_revenue: 2400000,
+    annual_profit: 360000,
+    industry_tags: ["e-commerce", "retail", "outdoor", "dtc"],
+    state: "CO",
+    date_listed: "2025-11-25",
+    owner_name: "Jen M."
+  },
+  {
+    id: "biz-7",
+    name: "SafeGuard Security Services",
+    description: "B2B security guard and patrol services. 50+ commercial clients on annual contracts. 35 employees. Licensed in 3 states. Recession-resistant revenue.",
+    asking_price: 2100000,
+    annual_revenue: 3200000,
+    annual_profit: 640000,
+    industry_tags: ["security", "b2b-services", "facility-services"],
+    state: "GA",
+    date_listed: "2026-01-05",
+    owner_name: "Carlos D."
+  },
+  {
+    id: "biz-8",
+    name: "Main Street Insurance Agency",
+    description: "Independent insurance agency with $4M in premiums. Allstate, Nationwide, Progressive appointments. 3 agents, 2 support staff. Strong book of business.",
+    asking_price: 900000,
+    annual_revenue: 950000,
+    annual_profit: 380000,
+    industry_tags: ["insurance", "financial-services", "agency"],
+    state: "PA",
+    date_listed: "2026-02-15",
+    owner_name: "Tom B."
+  },
+  {
+    id: "biz-9",
+    name: "FreshBite Meal Prep",
+    description: "Meal prep and delivery service targeting fitness-conscious consumers. 500 weekly subscribers. Commercial kitchen with capacity to 3x. 6 employees.",
+    asking_price: 380000,
+    annual_revenue: 520000,
+    annual_profit: 104000,
+    industry_tags: ["food-service", "meal-prep", "health-wellness", "dtc"],
+    state: "CA",
+    date_listed: "2026-01-28",
+    owner_name: "Lisa P."
+  },
+  {
+    id: "biz-10",
+    name: "Apex HVAC Solutions",
+    description: "Residential and light commercial HVAC. Install and service. 5 techs, 2 apprentices. 15-year reputation. Strong referral network. Owner wants to pursue other interests.",
+    asking_price: 700000,
+    annual_revenue: 1050000,
+    annual_profit: 262000,
+    industry_tags: ["hvac", "home-services", "residential", "commercial"],
+    state: "TN",
+    date_listed: "2025-12-20",
+    owner_name: "Steve H."
+  },
+  {
+    id: "biz-11",
+    name: "BluePrint Digital Marketing",
+    description: "Digital marketing agency. 30 retainer clients, mostly local SMBs. SEO, PPC, social media management. Fully remote team of 6. High client retention.",
+    asking_price: 550000,
+    annual_revenue: 720000,
+    annual_profit: 288000,
+    industry_tags: ["digital-marketing", "agency", "b2b-services"],
+    state: "NY",
+    date_listed: "2026-02-05",
+    owner_name: "Priya S."
+  },
+  {
+    id: "biz-12",
+    name: "Rocky Mountain Auto Body",
+    description: "Full-service auto body and paint shop. Insurance-approved. 4 bays, modern equipment. 6 employees. Stable revenue, low seasonality.",
+    asking_price: 480000,
+    annual_revenue: 850000,
+    annual_profit: 170000,
+    industry_tags: ["automotive", "auto-body", "repair-services"],
+    state: "CO",
+    date_listed: "2026-01-10",
+    owner_name: "Frank G."
+  },
+  {
+    id: "biz-13",
+    name: "Summit Physical Therapy",
+    description: "Outpatient physical therapy clinic. 2 licensed PTs, 1 PTA. 80 patient visits/week. In-network with major insurers. Owner-operated, strong community ties.",
+    asking_price: 420000,
+    annual_revenue: 680000,
+    annual_profit: 204000,
+    industry_tags: ["healthcare", "physical-therapy", "medical-practice"],
+    state: "OR",
+    date_listed: "2025-12-01",
+    owner_name: "Dr. Kevin J."
+  },
+  {
+    id: "biz-14",
+    name: "Industrial Coatings Corp",
+    description: "Specialty industrial coatings and painting. Oil & gas, infrastructure clients. 20 employees, union shop. $1.5M backlog. Equipment and contracts included.",
+    asking_price: 5500000,
+    annual_revenue: 7200000,
+    annual_profit: 1080000,
+    industry_tags: ["manufacturing", "industrial-services", "oil-gas", "coatings"],
+    state: "TX",
+    date_listed: "2026-02-12",
+    owner_name: "Wayne M."
+  },
+  {
+    id: "biz-15",
+    name: "Paws & Claws Veterinary",
+    description: "Small animal veterinary clinic. 2 vets, 4 techs. 2,500 active clients. Modern facility with digital x-ray and dental suite. Excellent online reviews.",
+    asking_price: 1100000,
+    annual_revenue: 1600000,
+    annual_profit: 400000,
+    industry_tags: ["veterinary", "healthcare", "pet-services"],
+    state: "WA",
+    date_listed: "2026-01-22",
+    owner_name: "Dr. Sarah N."
+  },
+  {
+    id: "biz-16",
+    name: "Dave's Vending Routes",
+    description: "23 vending machines across office parks and gyms. Semi-passive income. Owner spends ~10 hrs/week restocking. No employees.",
+    asking_price: 95000,
+    annual_revenue: 78000,
+    annual_profit: 52000,
+    industry_tags: ["vending"],
+    state: "AZ",
+    date_listed: "2026-02-20",
+    owner_name: "Dave F."
+  }
+]
+
+export const buyers = [
+  {
+    id: "buyer-1",
+    name: "Sarah Chen",
+    email: "sarah.c@example.com",
+    buyer_type: "individual",
+    target_industries: ["home-services", "landscaping"],
+    target_revenue_min: 300000,
+    target_revenue_max: 800000,
+    date_joined: "2025-11-03"
+  },
+  {
+    id: "buyer-2",
+    name: "Marcus Johnson",
+    email: "marcus.j@example.com",
+    buyer_type: "individual",
+    target_industries: ["restaurant", "food-service"],
+    target_revenue_min: 500000,
+    target_revenue_max: 2000000,
+    date_joined: "2025-10-15"
+  },
+  {
+    id: "buyer-3",
+    name: "Apex Capital Partners",
+    email: "deals@apexcap.example.com",
+    buyer_type: "pe_firm",
+    target_industries: ["manufacturing", "industrial-services"],
+    target_revenue_min: 3000000,
+    target_revenue_max: 10000000,
+    date_joined: "2025-09-20"
+  },
+  {
+    id: "buyer-4",
+    name: "Rachel Kim",
+    email: "rachel.k@example.com",
+    buyer_type: "individual",
+    target_industries: ["healthcare", "dental", "medical-practice"],
+    target_revenue_min: 400000,
+    target_revenue_max: 1000000,
+    date_joined: "2025-12-01"
+  },
+  {
+    id: "buyer-5",
+    name: "David Okafor",
+    email: "david.o@example.com",
+    buyer_type: "individual",
+    target_industries: ["e-commerce", "dtc", "retail"],
+    target_revenue_min: 1000000,
+    target_revenue_max: 5000000,
+    date_joined: "2026-01-10"
+  },
+  {
+    id: "buyer-6",
+    name: "Pine Ridge Holdings",
+    email: "acq@pineridge.example.com",
+    buyer_type: "strategic",
+    target_industries: ["home-services", "hvac", "plumbing", "landscaping"],
+    target_revenue_min: 500000,
+    target_revenue_max: 3000000,
+    date_joined: "2025-08-14"
+  },
+  {
+    id: "buyer-7",
+    name: "Tanya Reeves",
+    email: "tanya.r@example.com",
+    buyer_type: "individual",
+    target_industries: ["digital-marketing", "agency", "b2b-services"],
+    target_revenue_min: 200000,
+    target_revenue_max: 800000,
+    date_joined: "2026-02-01"
+  },
+  {
+    id: "buyer-8",
+    name: "Jordan Blake",
+    email: "jordan.b@example.com",
+    buyer_type: "individual",
+    target_industries: ["food-service", "restaurant", "meal-prep"],
+    target_revenue_min: 300000,
+    target_revenue_max: 700000,
+    date_joined: "2025-11-20"
+  },
+  {
+    id: "buyer-9",
+    name: "Hartwell Group",
+    email: "info@hartwellgrp.example.com",
+    buyer_type: "pe_firm",
+    target_industries: ["security", "facility-services", "b2b-services"],
+    target_revenue_min: 2000000,
+    target_revenue_max: 8000000,
+    date_joined: "2025-10-01"
+  },
+  {
+    id: "buyer-10",
+    name: "Emily Tran",
+    email: "emily.t@example.com",
+    buyer_type: "individual",
+    target_industries: ["veterinary", "pet-services", "healthcare"],
+    target_revenue_min: 800000,
+    target_revenue_max: 2000000,
+    date_joined: "2026-01-18"
+  },
+  {
+    id: "buyer-11",
+    name: "Ben Walker",
+    email: "ben.w@example.com",
+    buyer_type: "individual",
+    target_industries: ["automotive", "repair-services"],
+    target_revenue_min: 400000,
+    target_revenue_max: 1200000,
+    date_joined: "2025-12-15"
+  },
+  {
+    id: "buyer-12",
+    name: "Summit Search Fund",
+    email: "search@summitfund.example.com",
+    buyer_type: "individual",
+    target_industries: ["insurance", "financial-services", "b2b-services"],
+    target_revenue_min: 500000,
+    target_revenue_max: 2000000,
+    date_joined: "2025-09-05"
+  },
+  {
+    id: "buyer-13",
+    name: "Nina Patel",
+    email: "nina.p@example.com",
+    buyer_type: "individual",
+    target_industries: ["health-wellness", "food-service", "dtc"],
+    target_revenue_min: 200000,
+    target_revenue_max: 600000,
+    date_joined: "2026-01-25"
+  },
+  {
+    id: "buyer-14",
+    name: "CrossPoint Equity",
+    email: "deals@crosspoint.example.com",
+    buyer_type: "pe_firm",
+    target_industries: ["manufacturing", "coatings", "industrial-services", "oil-gas"],
+    target_revenue_min: 5000000,
+    target_revenue_max: 15000000,
+    date_joined: "2025-07-30"
+  },
+  {
+    id: "buyer-15",
+    name: "Alex Rivera",
+    email: "alex.r@example.com",
+    buyer_type: "individual",
+    target_industries: ["home-services", "plumbing", "hvac"],
+    target_revenue_min: 300000,
+    target_revenue_max: 700000,
+    date_joined: "2026-02-05"
+  },
+  {
+    id: "buyer-16",
+    name: "Laura Nguyen",
+    email: "laura.n@example.com",
+    buyer_type: "individual",
+    target_industries: ["healthcare", "physical-therapy"],
+    target_revenue_min: 400000,
+    target_revenue_max: 900000,
+    date_joined: "2025-11-10"
+  },
+  {
+    id: "buyer-17",
+    name: "GreenLeaf Property Services",
+    email: "acq@greenleaf.example.com",
+    buyer_type: "strategic",
+    target_industries: ["landscaping", "home-services", "facility-services"],
+    target_revenue_min: 800000,
+    target_revenue_max: 5000000,
+    date_joined: "2025-10-22"
+  },
+  {
+    id: "buyer-18",
+    name: "Chris Donovan",
+    email: "chris.d@example.com",
+    buyer_type: "individual",
+    target_industries: ["restaurant", "hospitality"],
+    target_revenue_min: 1000000,
+    target_revenue_max: 3000000,
+    date_joined: "2025-12-28"
+  },
+  {
+    id: "buyer-19",
+    name: "Maya Simmons",
+    email: "maya.s@example.com",
+    buyer_type: "individual",
+    target_industries: ["e-commerce", "outdoor", "retail"],
+    target_revenue_min: 500000,
+    target_revenue_max: 3000000,
+    date_joined: "2026-01-05"
+  },
+  {
+    id: "buyer-20",
+    name: "Heritage Insurance Group",
+    email: "info@heritageig.example.com",
+    buyer_type: "strategic",
+    target_industries: ["insurance", "agency", "financial-services"],
+    target_revenue_min: 700000,
+    target_revenue_max: 4000000,
+    date_joined: "2025-08-19"
+  },
+  {
+    id: "buyer-21",
+    name: "Jason Lee",
+    email: "jason.l@example.com",
+    buyer_type: "individual",
+    target_industries: ["digital-marketing", "e-commerce", "agency"],
+    target_revenue_min: 300000,
+    target_revenue_max: 1000000,
+    date_joined: "2026-02-10"
+  },
+  {
+    id: "buyer-22",
+    name: "Denise Williams",
+    email: "denise.w@example.com",
+    buyer_type: "individual",
+    target_industries: ["dental", "healthcare"],
+    target_revenue_min: 600000,
+    target_revenue_max: 1500000,
+    date_joined: "2025-11-30"
+  },
+  {
+    id: "buyer-23",
+    name: "Trident Industrial",
+    email: "amanda@trident.example.com",
+    buyer_type: "strategic",
+    target_industries: ["manufacturing", "aerospace", "defense", "cnc-machining"],
+    target_revenue_min: 2000000,
+    target_revenue_max: 8000000,
+    date_joined: "2025-09-12"
+  },
+  {
+    id: "buyer-24",
+    name: "Olivia Foster",
+    email: "olivia.f@example.com",
+    buyer_type: "individual",
+    target_industries: ["pet-services", "veterinary", "health-wellness"],
+    target_revenue_min: 300000,
+    target_revenue_max: 800000,
+    date_joined: "2026-01-30"
+  },
+  {
+    id: "buyer-25",
+    name: "Kevin Park",
+    email: "kevin.p@example.com",
+    buyer_type: "individual",
+    target_industries: ["auto-body", "automotive", "repair-services"],
+    target_revenue_min: 500000,
+    target_revenue_max: 1500000,
+    date_joined: "2025-10-08"
+  },
+  {
+    id: "buyer-26",
+    name: "FieldOps Ventures",
+    email: "deals@fieldops.example.com",
+    buyer_type: "strategic",
+    target_industries: ["security", "facility-services", "b2b-services", "industrial-services"],
+    target_revenue_min: 1500000,
+    target_revenue_max: 6000000,
+    date_joined: "2025-11-01"
+  },
+  {
+    id: "buyer-27",
+    name: "Amanda Cruz",
+    email: "amanda.c@example.com",
+    buyer_type: "individual",
+    target_industries: ["food-service", "health-wellness", "meal-prep"],
+    target_revenue_min: 200000,
+    target_revenue_max: 500000,
+    date_joined: "2026-02-08"
+  },
+  {
+    id: "buyer-28",
+    name: "Tyler Morgan",
+    email: "tyler.m@example.com",
+    buyer_type: "individual",
+    target_industries: ["home-services", "residential"],
+    target_revenue_min: 400000,
+    target_revenue_max: 900000,
+    date_joined: "2025-12-05"
+  },
+  {
+    id: "buyer-29",
+    name: "Sequoia Search Partners",
+    email: "team@sequoiasp.example.com",
+    buyer_type: "individual",
+    target_industries: ["healthcare", "medical-practice", "dental", "veterinary", "physical-therapy"],
+    target_revenue_min: 500000,
+    target_revenue_max: 2500000,
+    date_joined: "2025-07-15"
+  },
+  {
+    id: "buyer-30",
+    name: "Greg Hoffman",
+    email: "greg.h@example.com",
+    buyer_type: "individual",
+    target_industries: ["hvac", "plumbing", "home-services"],
+    target_revenue_min: 600000,
+    target_revenue_max: 1500000,
+    date_joined: "2025-10-30"
+  },
+  {
+    id: "buyer-31",
+    name: "Samira Osei",
+    email: "samira.o@example.com",
+    buyer_type: "individual",
+    target_industries: [],
+    target_revenue_min: null,
+    target_revenue_max: null,
+    date_joined: "2026-02-18"
+  },
+  {
+    id: "buyer-32",
+    name: "Ridgeline Capital",
+    email: "acq@ridgeline.example.com",
+    buyer_type: "pe_firm",
+    target_industries: ["healthcare", "home-services", "manufacturing", "e-commerce", "food-service", "b2b-services", "financial-services"],
+    target_revenue_min: 100000,
+    target_revenue_max: 50000000,
+    date_joined: "2025-06-10"
+  },
+  {
+    id: "buyer-33",
+    name: "Derek Whitfield",
+    email: "derek.w@example.com",
+    buyer_type: "individual",
+    target_industries: ["laundromat", "car-wash", "vending"],
+    target_revenue_min: 200000,
+    target_revenue_max: 600000,
+    date_joined: "2026-01-14"
+  }
+]
